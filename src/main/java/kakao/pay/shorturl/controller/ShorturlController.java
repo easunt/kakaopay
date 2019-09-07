@@ -28,10 +28,10 @@ public class ShorturlController {
         return modelAndView;
     }
 
-    @GetMapping("{shortenUrl}")
-    public RedirectView getOriginalUrl(@PathVariable String shortenUrl) {
+    @GetMapping("{shortUrl}")
+    public RedirectView getOriginalUrl(@PathVariable String shortUrl) {
         RedirectView redirectView = new RedirectView();
-        redirectView.setUrl(shorturlService.getOriginalUrl(shortenUrl));
+        redirectView.setUrl(shorturlService.getOriginalUrl(shortUrl));
         return redirectView;
     }
 
