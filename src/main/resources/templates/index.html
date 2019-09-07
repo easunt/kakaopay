@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<form class="m-t" role="form" action="/" id="submit" method="post">
+    <input type="text" name="url" id="url" class="form-control" placeholder="URL" required="required"/>
+    <button type="submit" class="btn btn-primary block full-width m-b">Submit</button>
+</form>
+<a th:href="@{${result}}">
+    <h2 class="post-title" th:text="${result}">
+    </h2>
+</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "system-default",
+      "type": "kakao.pay.shorturl.config.SystemConfig",
+      "sourceType": "kakao.pay.shorturl.config.SystemConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "system-default.domain",
+      "type": "java.lang.String",
+      "sourceType": "kakao.pay.shorturl.config.SystemConfig"
+    }
+  ],
+  "hints": []
+}
