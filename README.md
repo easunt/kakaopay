@@ -64,9 +64,8 @@ git clone https://github.com/kdgiant174/kakaopay.git
 end point           | Http method | prarmeter             | response                     | description     |
 |------------------ |------------ |-----------------------|------------------------------|-----------------|
 localhost/          | GET         | 시작페이지 호출           | view = index.html            | 시작페이지 호출     |
-localhost/          | POST        | body : {url : $url},  | view = index.html            | 단축 URL 생성     |
-|                   |             |                       | value = {result : $shortUrl} |                 |
-localhost/{shortUrl}| GET         | 잘못된 결제 금액 요청      | redirect                     | 단축 URL 리다이렉션 |                                
+localhost/          | POST        | param : {url : $url},  | view = index.html, value = {result : $shortUrl}            | 단축 URL 생성     |
+localhost/{shortUrl}| GET         | path : {shortUrl: $shortUrl}     | redirect                     | 단축 URL 리다이렉션 |                                
 
 ## Response Error Message
 Error Message                | HTTP Status Code          | Detailed Infomation                                  |
