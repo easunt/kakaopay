@@ -22,17 +22,14 @@ public class ShorturlController {
 
     @PostMapping
     public ModelAndView createShortUrl(@RequestParam String url) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
+        ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("result", shorturlService.createShorturl(url));
         return modelAndView;
     }
 
     @GetMapping("{shortUrl}")
     public RedirectView getOriginalUrl(@PathVariable String shortUrl) {
-        RedirectView redirectView = new RedirectView();
-        redirectView.setUrl(shorturlService.getOriginalUrl(shortUrl));
-        return redirectView;
+        return new RedirectView(shorturlService.getOriginalUrl(shortUrl));
     }
 
 }

@@ -29,6 +29,7 @@ public class CustomBase62Util {
     }
 
     public static long decodeStringtoLong(String input) {
+        isCustomBase64(input);
         long output = 0;
         for (int i = 0; i < input.length(); i++) {
             output = output * 62L + (long) BASE62.indexOf(input.charAt(i));
